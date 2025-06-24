@@ -22,6 +22,21 @@ environment.systemPackages = with pkgs;
 	zellij
 	dive
 	distrobox
+	git
+	gh
+	pciutils
+	geany
+	acpi
+	lnyx
+	elinks
+	fastfetch
+	nnn
+	btop
+	htop
+	calcurse
+	pcmanfm
+	libnotify
+	hledger
 
 ];
 }

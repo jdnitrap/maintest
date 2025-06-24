@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       	./hardware-configuration.nix
+#      /etc/nixbook/base_lite.nix
 
 ########################################################################
 
@@ -24,16 +25,16 @@
 ##Desktop Eviroments
 
 #	./icewm.nix
-#	./gnome.nix
-#	./gnome-rm-apps.nix
+	./gnome.nix
+	./gnome-rm-apps.nix
 #	./plasma.nix
 #	./lxqt.nix
 #	./icewm.nix
-	./cinnamon.nix
+#	./cinnamon.nix
 
 ##System
 
-#	./pkgs.nix
+	./pkgs.nix
 # 	./print.nix
 #	./sound.nix
 #	./opse.nix
@@ -119,14 +120,14 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nimda = {
-    isNormalUser = true;
-    description = "nimda";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
+#  users.users.nimda = {
+#    isNormalUser = true;
+#    description = "nimda";
+#    extraGroups = [ "networkmanager" "wheel" ];
+#    packages = with pkgs; [
     
-    ];
-  };
+#    ];
+#  };
   
   #users.users.bob = {
     #isNormalUser = true;
