@@ -27,7 +27,7 @@ environment.systemPackages = with pkgs;
 	pciutils
 	geany
 	acpi
-	lnyx
+	lynx
 	elinks
 	fastfetch
 	nnn
@@ -37,6 +37,7 @@ environment.systemPackages = with pkgs;
 	pcmanfm
 	libnotify
 	hledger
+	gnome-software
 
 ];
 }

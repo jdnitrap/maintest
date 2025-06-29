@@ -15,7 +15,7 @@
 ##User###
 
 
-	./bob.nix
+#	./bob.nix
 #	/.nimda.nix
 #	<home-manager/nixos>
 
@@ -34,13 +34,13 @@
 
 ##System
 
-	./pkgs.nix
+#	./pkgs.nix
 # 	./print.nix
 #	./sound.nix
 #	./opse.nix
 #	./bluetooth.nix
 	./flatpak.nix
-
+	./plymouth.nix
 
 ##Networking    
     
