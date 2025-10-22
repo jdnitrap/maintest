@@ -8,17 +8,17 @@
   imports =
     [ # Include the results of the hardware scan.
       	./hardware-configuration.nix
-#      /etc/nixbook/base_lite.nix
+
 
 ########################################################################
 
 ##User###
 
 
-	./bob.nix
-	./nimda.nix
-
-
+	./user-bob.nix
+	./user-nimda.nix
+	./user-game.nix
+	./user-vm.nix
 
 
 
@@ -41,6 +41,7 @@
 #	./bluetooth.nix
 	./flatpak.nix
 	./plymouth.nix
+	./virtualmachine.nix
 
 ##Networking    
     
@@ -60,6 +61,15 @@
 
 #	./firefox2.nix
 
+
+
+#########################Game########################################
+
+	./steam.nix
+
+
+
+
 ###Experiment
 
 #	./fwcommon.nix
@@ -77,7 +87,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "hostname"; # Define your hostname.
+  networking.hostName = "lenovomini"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -119,15 +129,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-#  users.users.nimda = {
-#    isNormalUser = true;
-#    description = "nimda";
-#    extraGroups = [ "networkmanager" "wheel" ];
-#    packages = with pkgs; [
-    
-#    ];
-#  };
+ 
   
   #users.users.bob = {
     #isNormalUser = true;
@@ -143,7 +145,15 @@
 
 
 
-  
+#users.users.eve.isNormalUser = true;
+#home-manager.users.eve = { pkgs, ... }: {
+#  home.packages = with pkgs; [ htop ];
+#  programs.bash.enable = true;
+
+  # The state version is required and should stay at the version you
+  # originally installed.
+#  home.stateVersion = "24.11";
+#};  
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -247,7 +257,7 @@
 #	services.power-profiles-daemon.enable = true;
 #	services.upower.enable = true;
 #	services.fwupd.enable = true;
-	hardware.sensor.iio.enable = true;
+#	hardware.sensor.iio.enable = true;
 
 
 
@@ -258,12 +268,19 @@
 
  
 #	services.netbird.enable = true;
-#services.firewalld.enable = true;
-#services.kasmweb.enable = true;
+#	services.firewalld.enable = true;
+#	services.kasmweb.enable = true;
 
 	hardware.acpilight.enable = true;
-virtualisation.containers.enable = true;
-  virtualisation.podman.enable = true;
-     
+	virtualisation.containers.enable = true;
+  	virtualisation.podman.enable = true;
+  	
+ services.tor.enable = true;
+ 
+ hardware.xone.enable = true;
+# hardware.xpadneo.enable = true;
+ 
+ 
+ 
 
 }

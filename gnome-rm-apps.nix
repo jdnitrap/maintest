@@ -6,7 +6,7 @@
 
 environment.gnome.excludePackages = (with pkgs; [
   
-  epiphany # web browser
+  #epiphany # web browser
   geary
   simple-scan
   gnome-calculator
@@ -28,7 +28,7 @@ environment.gnome.excludePackages = (with pkgs; [
   
 ]);
 
-services.gnome.core-utilities.enable = false;
+services.gnome.core-utilities.enable = true;
 services.xserver.excludePackages = with  pkgs; [ xterm ];
 documentation.nixos.enable = false;
 

@@ -13,12 +13,9 @@ environment.systemPackages = with pkgs;
 	tmux
 	flatpak
 #	netbird
-	btop
 	gnome-console
 	podman
 	podman-compose
-	screen
-	tmux
 	zellij
 	dive
 	distrobox
@@ -34,10 +31,21 @@ environment.systemPackages = with pkgs;
 	btop
 	htop
 	calcurse
-	pcmanfm
-	libnotify
+#	pcmanfm
+#	libnotify
 	hledger
 	gnome-software
+	onlyoffice-desktopeditors
+	protonvpn-gui
+	mediawriter
+	filezilla
+	axel
+	wget
+	nautilus
+	
+	linuxKernel.packages.linux_zen.xone
+	linuxKernel.packages.linux_zen.xpadneo
+	linuxKernel.packages.linux_xanmod_stable.xpadneo
 
 ];
 }
