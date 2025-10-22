@@ -15,9 +15,9 @@
 ##User###
 
 
-#	./bob.nix
-#	/.nimda.nix
-#	<home-manager/nixos>
+	./bob.nix
+	./nimda.nix
+
 
 
 
@@ -26,7 +26,7 @@
 
 #	./icewm.nix
 	./gnome.nix
-	./gnome-rm-apps.nix
+#	./gnome-rm-apps.nix
 #	./plasma.nix
 #	./lxqt.nix
 #	./icewm.nix
@@ -34,9 +34,9 @@
 
 ##System
 
-#	./pkgs.nix
-# 	./print.nix
-#	./sound.nix
+	./pkgs.nix
+ 	./print.nix
+	./sound.nix
 #	./opse.nix
 #	./bluetooth.nix
 	./flatpak.nix
@@ -44,7 +44,7 @@
 
 ##Networking    
     
-#   	./syncthing.nix
+#   ./syncthing.nix
 #	./syncthing2.nix
 #	./tailscale.nix    
 
@@ -143,18 +143,10 @@
 
 
 
-#users.users.eve.isNormalUser = true;
-#home-manager.users.eve = { pkgs, ... }: {
-#  home.packages = with pkgs; [ htop ];
-#  programs.bash.enable = true;
-
-  # The state version is required and should stay at the version you
-  # originally installed.
-#  home.stateVersion = "24.11";
-#};  
+  
 
   # Install firefox.
-  programs.firefox.enable = false;
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
