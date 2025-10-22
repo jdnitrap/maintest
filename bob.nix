@@ -4,11 +4,12 @@
 
 {
 
-users.users.bob = {
-    isNormalUser = true;
-    description = "bob";
-    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "podman" "input" "video"];
-    packages = with pkgs; [
+	users.users.bob = {
+	isNormalUser = true;
+	description = "bob";
+	extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "podman" "input" "video"];
+	initialPassword = "b";
+	packages = with pkgs; [
      
     ];
   };
