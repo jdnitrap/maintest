@@ -15,7 +15,7 @@ services = {
     overrideFolders = true;     # overrides any folders added or deleted through the WebUI
     settings = {
       devices = {
-        "iNixos" = { id = "JECRJLD-FB2KJ6O-H4EJNAD-7V2VRZA-BC7EZ7G-OPZ4UX4-3AQKHZB-7CATUAJ"; };
+        "iNixos" = { id = "   "; };
         
       };
       folders = {
